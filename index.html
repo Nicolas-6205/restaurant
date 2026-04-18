@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Restaurant</title>
+
+<style>
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: black;
+  color: white;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.btn {
+  background: #e63946;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  height: 90vh;
+  background: url('YOUR-HERO-IMAGE.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-content {
+  background: rgba(0,0,0,0.6);
+  padding: 30px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+/* FEATURES */
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+  text-align: center;
+}
+
+.feature {
+  max-width: 200px;
+}
+
+/* MENU */
+.menu {
+  padding: 40px;
+  background: #f4f4f4;
+}
+
+.menu h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.menu-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.menu-card {
+  background: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* ABOUT */
+.about {
+  padding: 40px;
+  text-align: center;
+}
+
+/* CONTACT */
+.contact {
+  padding: 40px;
+  background: #f4f4f4;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: auto;
+}
+
+.contact input, .contact textarea {
+  margin: 10px 0;
+  padding: 10px;
+}
+
+/* FOOTER */
+footer {
+  background: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-grid {
+    flex-direction: column;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <h2>Le Gourmet</h2>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Menu</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+  <button class="btn">Reserve</button>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Delicious food, unforgettable experience</h1>
+    <p>Fresh ingredients, authentic flavors</p>
+    <button class="btn">View Menu</button>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <div class="feature">
+    <h3>🍽️ Fresh</h3>
+    <p>Quality ingredients</p>
+  </div>
+  <div class="feature">
+    <h3>👨‍🍳 Chef</h3>
+    <p>Expert cooking</p>
+  </div>
+  <div class="feature">
+    <h3>⭐ Top Rated</h3>
+    <p>Best experience</p>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu">
+  <h2>Our Menu</h2>
+  <div class="menu-grid">
+    <div class="menu-card">
+      <h3>Main</h3>
+      <p>Pasta - 12€</p>
+      <p>Chicken - 14€</p>
+    </div>
+    <div class="menu-card">
+      <h3>Burgers</h3>
+      <p>Classic - 10€</p>
+      <p>Cheese - 11€</p>
+    </div>
+    <div class="menu-card">
+      <h3>Desserts</h3>
+      <p>Tiramisu - 6€</p>
+      <p>Cake - 5€</p>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery">
+  <img src="IMAGE1.jpg">
+  <img src="IMAGE2.jpg">
+  <img src="IMAGE3.jpg">
+  <img src="IMAGE4.jpg">
+  <img src="IMAGE5.jpg">
+  <img src="IMAGE6.jpg">
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+  <h2>About Us</h2>
+  <p>We provide high-quality food and a unique dining experience.</p>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+  <h2>Contact & Reservation</h2>
+  <form>
+    <input type="text" placeholder="Name">
+    <input type="email" placeholder="Email">
+    <input type="date">
+    <textarea placeholder="Message"></textarea>
+    <button class="btn">Book Now</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Le Gourmet</p>
+</footer>
+
+</body>
+</html>
